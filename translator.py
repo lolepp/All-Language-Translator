@@ -19,17 +19,8 @@ def translate(text, lang):
     translator = Translator()
     return translator.translate(text, dest = lang).text
 
-def copy_to_clipboard(text):
-    """
-    Copy the given text to the clipboard.
-
-    Parameters:
-    - text: The text to be copied.
-    """
-    pyperclip.copy(text)
-
 def main():
-    # Text, which is translated
+    # Your text here, which will be translated
     text = "Happy birthday, Simon."
     
     # All the languages, to which the text is translated to
