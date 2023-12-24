@@ -7,7 +7,7 @@ import pyperclip
 
 def translate(text, lang):
     """
-    Translates text from English to the specified language.
+    Translates text to the specified language.
 
     Parameters:
     - text: The text to be translated.
@@ -21,7 +21,7 @@ def translate(text, lang):
 
 def main():
     # Your text here, which will be translated
-    text = "Happy birthday, Simon."
+    text = "Frohe Weihnachten."
     
     # All the languages, to which the text is translated to
     langs = ["af", "sq", "am", "ar", "hy", "az", "eu", "be", "bn", "bs", "bg", "ca", "ceb", "zh-CN", "zh-TW", "co", "hr", "cs", "da",
@@ -33,12 +33,12 @@ def main():
 
     result = ""
     for lang in langs:
-        # print("Current lang: " + lang)
+        # print(f"Current lang: {lang}")
         translated = translate(text, lang)
         result += translated + "\n"
         print(translated)
-    
-    pyperclip.copy(result + "\b")
+    result = result.rstrip('\n')
+    pyperclip.copy(result)
 
 if __name__ == "__main__":
     main()
